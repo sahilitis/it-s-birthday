@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./styless.css">
+
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">KNOCK!! KNOCK!!</h1>
+                <h1 class = "header_text">Someone is on the door.</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media.giphy.com/media/3o7TKJDhi59g05jy12/giphy.gif?cid=790b7611qx6obflyduh3ou7qnbjsyf5fxi3zpgf5h6d060it&ep=v1_gifs_search&rid=giphy.gif&ct=g">
+            </div>
+            <div class = "button">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Open the door</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">Don't</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "open.html";
+                    }
+
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+
+    </body> 
+</html>
